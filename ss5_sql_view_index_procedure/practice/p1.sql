@@ -5,8 +5,10 @@ SELECT * FROM customers WHERE customerName = 'Land of Toys Inc.';
 
 EXPLAIN SELECT * FROM customers WHERE customerName = 'Land of Toys Inc.'; 
 
+
 ALTER TABLE customers ADD INDEX idx_customerName(customerName);
 EXPLAIN SELECT * FROM customers WHERE customerName = 'Land of Toys Inc.'; 
+DROP INDEX idx_customerName on customers;
 
 CREATE INDEX idx_contactLastName ON customers(contactLastName);
 EXPLAIN SELECT * FROM customers WHERE contactLastName = 'King';
