@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+    /*div[class="row"]:nth-child(2) div{*/
+    /*    border: 1px solid;*/
+    /*    padding: 5px;*/
+    /*}*/
+
+    p {
+      font-weight: bold;
+    }
+
+    pre {
+      text-align: left;
+      white-space: pre-wrap;
+      word-break: break-all;
+      padding-top: 10px;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .a {
+      border: 1px solid;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Responsive Image Gallery</h1>
+        <p>Resize the browser window to see the effect.</p>
+      </div>
+    </div>
+    <div class="row">
+      <!-- mobile first so don't need define col-sm-->
+      <div class="col-3">
+        <div class="a">
+          <div class="row me-1">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+          </div>
+          <div class="row me-1">
+            Add a description of the image here
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-3">
+        <div class="a">
+          <div class="row me-1">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+          </div>
+          <div class="row me-1">
+            Add a description of the image here
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-3">
+        <div class="a">
+          <div class="row me-1">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+          </div>
+          <div class="row">
+            Add a description of the image here
+          </div>
+        </div>
+
+
+      </div>
+      <div class="col-3">
+        <div class="a">
+          <div class="row me-1">
+            <img src="https://demo.codegym.vn/web/15/gallery/img_fjords.jpg">
+          </div>
+          <div class="row me-1">
+            Add a description of the image here
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col">
+        <pre>This example use media queries to re-arrange the images on different screen sizes: for screens larger than 700px wide, it will show four images side by side.For screens smaller than 700px, it will show two images side by side. For screens smaller than 500px, the images will stack vertically (100%).</pre>
+      </div>
+    </div> -->
+  </div>
+</body>
+
+</html>

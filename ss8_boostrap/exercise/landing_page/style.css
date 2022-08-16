@@ -1,0 +1,24 @@
+.type02 .dropdown-toggle::after{
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-color: transparent black black transparent;
+  border-width:1px;
+  border-style: solid;
+  transform: rotate(45deg);
+}
+.type02 .dropdown-toggle{
+  padding: 0 !important;
+  padding-top: 8px;
+  margin: 0 8px;
+}
+.type02 .dropdown-toggle:hover{
+  border-bottom: 2px solid black;
+}
+.product-detail :hover{
+  border-bottom: 2px solid black;
+}
+video {
+  object-fit: fill;
+  height: 100%;
+}
