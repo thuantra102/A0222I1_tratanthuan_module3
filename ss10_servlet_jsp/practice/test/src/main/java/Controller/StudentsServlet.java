@@ -1,6 +1,8 @@
 package Controller;
 
 import Model.Student;
+import Service.IStudentService;
+import Service.impl.StudentService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -14,24 +16,80 @@ import java.util.List;
 
 @WebServlet(name = "StudentsServlet", urlPatterns = "/student")
 public class StudentsServlet extends HttpServlet {
-    private static List<Student> studentList = new ArrayList<>();
-
-    @Override
-    public void init() throws ServletException {
-        studentList.add(new Student(1, "chanh", true, "12-12-2022", 9, "chanhtv", 1, "chanhtv@gmail.com"));
-        studentList.add(new Student(2, "chanh2", false, "12-12-2022", 3, "chanhtv", 1, "chanhtv@gmail.com"));
-        studentList.add(new Student(3, "chanh3", false, "12-12-2022", 8, "chanhtv", 1, "chanhtv@gmail.com"));
-        studentList.add(new Student(4, "chanh4", true, "12-12-2022", 7, "chanhtv", 1, "chanhtv@gmail.com"));
-        studentList.add(new Student(5, "chanh5", true, "12-12-2022", 6, "chanhtv", 1, "chanhtv@gmail.com"));
-    }
+    private IStudentService studentService = new StudentService();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "create":
+                // lấy dữ liêu và lưu vào db
+                save(request,response);
+                break;
+            case "delete":
+                // xoá
+                break;
+            default:
 
+        }
+    }
+
+    private void save(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        boolean gender =Boolean.parseBoolean(request.getParameter("gender"));
+        String birthday =request.getParameter("birthday");
+        String email = request.getParameter("email");
+        int point =Integer.parseInt(request.getParameter("point"));
+        int classId=Integer.parseInt(request.getParameter("classId"));
+        String account = request.getParameter("account");
+        Student student = new Student(id,name,gender,birthday,point,account,classId,email);
+        boolean check = studentService.add(student);
+        String mess ="them moi khong thanh cong";
+        if (check){
+            mess="Them moi thanh cong";
+        }
+        request.setAttribute("mess", mess);
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/student/create.jsp");
+        try {
+            requestDispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("list.jsp");
-        request.setAttribute("studentList", studentList);
+        String action =request.getParameter("action");
+        if (action == null) {
+            action = "";
+        }
+        switch (action) {
+            case "create":
+                showFormCreate(request,response);
+                // thêm mới
+                break;
+            case "delete":
+                // xoá
+                break;
+            default:
+                // trả về trang list
+                showListStudent(request, response);
+        }
+
+    }
+
+    private void showListStudent(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/student/list.jsp");
+        request.setAttribute("studentList", this.studentService.findAll());
         requestDispatcher.forward(request, response);
+    }
+
+    private void showFormCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("view/student/create.jsp");
+        requestDispatcher.forward(request,response);
     }
 }

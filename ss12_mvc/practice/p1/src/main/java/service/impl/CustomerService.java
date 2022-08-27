@@ -20,7 +20,7 @@ public class CustomerService implements ICustomerService {
         customers.put(6, new Customer(6, "Rose", "rose@codegym.vn", "Newyork"));
     }
     @Override
-    public  List<Customer> findAll() {
+    public static List<Customer> findAll() {
         return new ArrayList<>(customers.values());
     }
 
