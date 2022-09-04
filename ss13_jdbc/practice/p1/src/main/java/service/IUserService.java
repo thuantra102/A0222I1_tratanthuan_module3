@@ -9,13 +9,10 @@ import java.util.Map;
 import java.util.Optional;
 
 public interface IUserService {
-
-
-    public List<User> selectAllUsers();
-
+    public List<User> selectUsers(String check);
     public boolean deleteUser(int id) throws SQLException;
-
-
     public Map<String,String> save(User user) throws SQLException;
     public Optional<User> getById(int id);
+    public List<User> search(String country);
+
 }

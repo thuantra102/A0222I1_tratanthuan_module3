@@ -19,6 +19,9 @@
     <h2 onclick="openPopup()">
         Add New User
     </h2>
+    <a id="btSearch" href="" >Search</a>
+    <input type="text" id="valSearch" name="countrySearch" value="${valueSearch}">
+    <a href="/userSv?check  =sort">Sort</a>
 </center>
 <div align="center">
     <table border="1" cellpadding="5">
@@ -39,6 +42,7 @@
                 <td>
                     <span onclick="openPopup(${user.id})">Edit</span>
 
+
 <%--                    <a href="/userSv?editId=${user.id}">Edit</a>--%>
                     <a href="/userSv?deleteId=${user.id}">Delete</a>
                 </td>
@@ -51,18 +55,44 @@
     </div>
 </div>
 <script>
+    const search = document.getElementById("btSearch");
     const closePopup = () => {
         document.getElementById("modal").innerHTML = '';
     }
-    const openPopup = (id) => {
-        fetch("http://localhost:8080/view/user/popup.jsp").then(res => res.text()).then(res => {
-            document.getElementById("modal").innerHTML = res;
-            fetch("http://localhost:8080/"+ (id ? ("userSv?editId="+id)
-                : "view/user/form.jsp")).then(res_ => res_.text()).then(res_ => {
-                document.querySelector(".modal_content > div").innerHTML = res_
-            });
-        })
+
+    // const openPopup = (id) => {
+    //     fetch("http://localhost:8080/view/user/popup.jsp").then(res => res.text()).then(res => {
+    //         document.getElementById("modal").innerHTML = res;
+    //         fetch("http://localhost:8080/"+ (id ? ("userSv?editId="+id)
+    //             : "view/user/form.jsp")).then(res_ => res_.text()).then(res_ => {
+    //             document.querySelector(".modal_content > div").innerHTML = res_
+    //         });
+    //     })
+    // }
+    function openPopup(id) {
+        fetch("http://localhost:8080/view/user/popup.jsp").then(
+            function (res) {
+                return res.text();
+            }
+        ).then(
+            function (res) {
+                document.getElementById("modal").innerHTML = res;
+            }
+        );
+        fetch("http://localhost:8080/" + (id ? ("userSv?editId=" + id) : "view/user/form.jsp")).then(
+            function (response) {
+                return response.text();
+            }
+        ).then(
+            function (response) {
+                document.querySelector(".modal_content > div").innerHTML = response;
+            }
+        )
     }
+    search.addEventListener("click", function () {
+        let value = document.getElementById("valSearch").value;
+        document.getElementById("btSearch").href = "/userSv?q=" + value;
+    })
 
 </script>
 </body>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0345c2a2-d95e-42c7-970b-e2b35148b5a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../examination/.idea/examination.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/controller/ProductServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/reponsitory/BaseRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/reponsitory/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/reponsitory/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/reponsitory/impl/CategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/reponsitory/impl/ProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/service/impl/CategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/java/service/impl/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/webapp/view/product/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/e/src/main/webapp/view/product/style/list.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/controller/StudentServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/controller/StudentServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/model/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/model/Student.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/repository/IStudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/repository/IStudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/repository/impl/StudentRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/repository/impl/StudentRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/service/IStudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/service/IStudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/service/impl/StudentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/classes/java/main/service/impl/StudentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/libs/demo_jstl-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/build/libs/demo_jstl-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/controller/StudentServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/controller/StudentServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/model/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/model/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/repository/IStudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/repository/IStudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/repository/impl/StudentRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/repository/impl/StudentRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/service/IStudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/service/IStudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/service/impl/StudentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/java/service/impl/StudentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/webapp/view/student/create.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/webapp/view/student/create.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/webapp/view/student/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss12_mvc/practice/demo_jstl/src/main/webapp/view/student/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/database_p1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/database_p1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/controller/UserServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/controller/UserServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/repository/IUserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/repository/IUserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/repository/impl/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/repository/impl/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/service/impl/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/classes/java/main/service/impl/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/libs/p1-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/build/libs/p1-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/controller/UserServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/controller/UserServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/repository/IUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/repository/IUserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/repository/impl/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/repository/impl/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/service/impl/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/java/service/impl/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/webapp/view/user/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ss13_jdbc/practice/p1/src/main/webapp/view/user/list.jsp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="2E55gwI2uQpeJzE8R26JgoqbpRK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../examination" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0345c2a2-d95e-42c7-970b-e2b35148b5a1" name="Default Changelist" comment="" />
+      <created>1661872719050</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1661872719050</updated>
+      <workItem from="1661872720322" duration="53000" />
+      <workItem from="1661962669721" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="421" y="131" key="FileChooserDialogImpl" timestamp="1661962685407">
+      <screen x="0" y="0" width="1280" height="752" />
+    </state>
+    <state x="421" y="131" key="FileChooserDialogImpl/0.0.1280.752@0.0.1280.752" timestamp="1661962685407" />
+    <state x="91" y="0" key="new project wizard" timestamp="1661872771979">
+      <screen x="0" y="0" width="1280" height="752" />
+    </state>
+    <state x="91" y="0" key="new project wizard/0.0.1280.752@0.0.1280.752" timestamp="1661872771979" />
+  </component>
+</project>

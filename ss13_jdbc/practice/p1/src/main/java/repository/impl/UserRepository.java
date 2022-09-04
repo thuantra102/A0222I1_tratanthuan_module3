@@ -4,16 +4,14 @@ import model.User;
 import repository.BaseRepository;
 import repository.IUserRepository;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 public class UserRepository implements IUserRepository {
-    private static final String SELECT_ALL_USERS = "select * from users";
+    private static final String COUNTRY_SEARCH = "call search(?);";
+    private static  String SELECT_USERS = "select * from users ";
     private static final String EDIT_USER = "update users \n" +
             "set \n" +
             "\t`name` = ?,\n" +
@@ -28,11 +26,11 @@ public class UserRepository implements IUserRepository {
 
 
     @Override
-    public List<User> selectAllUsers() {
-        List<User> userList = new ArrayList<>();
+    public List<User> selectUsers(String check) {
+                List<User> userList = new ArrayList<>();
         Connection connection = BaseRepository.getConnectDB();
         try {
-            ResultSet resultSet =connection.prepareStatement(SELECT_ALL_USERS).executeQuery();
+            ResultSet resultSet =connection.prepareStatement(SELECT_USERS + (check == null ? "" : "order by country" )).executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
                 String name = resultSet.getString("name");
@@ -55,7 +53,26 @@ public class UserRepository implements IUserRepository {
         return (num==1);
     }
 
-
+    @Override
+    public List<User> search(String country) {
+        List<User> userSearch = new ArrayList<>();
+        Connection connection = BaseRepository.getConnectDB();
+        try {
+            CallableStatement callableStatement= connection.prepareCall(COUNTRY_SEARCH);
+            callableStatement.setString(1,country);
+            ResultSet resultSet =callableStatement.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String name = resultSet.getString("name");
+                String email = resultSet.getString("email");
+                String country1 = resultSet.getString("country");
+                userSearch.add(new User(id,name,email,country1));
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return userSearch;
+    }
 
     @Override
     public void save(User user) throws SQLException {
@@ -74,9 +91,8 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public Optional<User> getById(int id) {
-        List<User> userList = selectAllUsers();
+        List<User> userList = selectUsers(null);
         Optional<User> userId = userList.stream().filter(user -> user.getId() == id).findFirst();
-
         return userId;
     }
 }

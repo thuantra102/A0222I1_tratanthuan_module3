@@ -10,4 +10,19 @@ create table users (
 );
 
 insert into users(name, email, country) values('Minh','minh@codegym.vn','Viet Nam');
-insert into users(name, email, country) values('Kante','kante@che.uk','Kenia');
+
+
+
+DELIMITER //
+
+CREATE PROCEDURE search(In countryName varchar(255))
+BEGIN
+	SELECT * FROM users where country like concat('%',countryName, '%');
+END //
+DELIMITER ;
+
+call search(?);
+
+select * from users
+where country like 0
+order by country

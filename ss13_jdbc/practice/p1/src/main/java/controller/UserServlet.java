@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
@@ -25,8 +26,8 @@ public class UserServlet extends HttpServlet {
             } catch (SQLException throwables) {
                 throwables.printStackTrace();
             }
-            request.getRequestDispatcher("view/user/list.jsp").forward(request,response);
-
+            request.getRequestDispatcher("view/user/form.jsp").forward(request,response);
+//        response.sendRedirect("/userSv");
     }
     private boolean isRemove(String deleteId) {
         if(deleteId == null) {
@@ -39,6 +40,7 @@ public class UserServlet extends HttpServlet {
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String country = request.getParameter("country");
+        
         if(isAdd(id)) {
             Map<String,String> map = userService.save(new User(name,email,country));
             validate(map,request,response);
@@ -68,33 +70,58 @@ public class UserServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String editId = request.getParameter("editId");
         String deleteId = request.getParameter("deleteId");
-        if(isRemove(deleteId)) {
-            try {
-                boolean check =  userService.deleteUser(Integer.parseInt(deleteId));
-                showList(request,response);
-            } catch (SQLException throwables) {
-                throwables.printStackTrace();
+        String country = request.getParameter("q");
+//        String checkAction = request.getParameter("check");
+//        if(checkAction == null) {
+//            showList(request,response,userService.selectUsers(null));
+//        } else if (checkAction.equals("sort")) {
+//            showList(request,response,userService.selectUsers("sort"));
+//        } else {
+            if(isSearch(country)) {
+                List<User> userSearch = userService.search(country);
+                request.setAttribute("valueSearch",country);
+                showList(request,response,userSearch);
+            } else  {
+                if(isRemove(deleteId)) {
+                    try {
+                        boolean check =  userService.deleteUser(Integer.parseInt(deleteId));
+                        showList(request,response,userService.selectUsers(null));
+                    } catch (SQLException throwables) {
+                        throwables.printStackTrace();
+                    }
+                } else {
+                    if(isEdit(editId)) {
+                        int id = Integer.parseInt(editId);
+                        Optional<User> user = userService.getById(id);
+                        request.setAttribute("user", user.get());
+                        request.getRequestDispatcher("view/user/form.jsp").forward(request,response);
+                    } else {
+                        showList(request,response,userService.selectUsers(null));
+                    }
+                }
             }
+//        }
 
-        } else {
-            if(isEdit(editId)) {
-                int id = Integer.parseInt(editId);
-                Optional<User> user = userService.getById(id);
-                request.setAttribute("user", user.get());
-                request.getRequestDispatcher("view/user/form.jsp").forward(request,response);
-            } else {
-                showList(request,response);
-            }
-        }
+
+
     }
+
+
+    private boolean isSearch(String q) {
+        if(q == null)  {
+            return false;
+        }
+        return true;
+    }
+
     private boolean isEdit(String editId) {
         if(editId == null) {
             return false;
         }
         return true;
     }
-    private void showList(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("listUser",userService.selectAllUsers());
+    private void showList(HttpServletRequest request, HttpServletResponse response, List<User> list) throws ServletException, IOException {
+        request.setAttribute("listUser",list);
         request.getRequestDispatcher("view/user/list.jsp").forward(request,response);
     }
 }

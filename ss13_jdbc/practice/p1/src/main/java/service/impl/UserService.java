@@ -18,8 +18,8 @@ public class UserService implements IUserService {
 
 
     @Override
-    public List<User> selectAllUsers() {
-        return userRepository.selectAllUsers();
+    public List<User> selectUsers(String check) {
+        return userRepository.selectUsers(check);
     }
 
     @Override
@@ -46,4 +46,11 @@ public class UserService implements IUserService {
     public Optional<User> getById(int id) {
         return userRepository.getById(id);
     }
+
+    @Override
+    public List<User> search(String country) {
+        return userRepository.search(country);
+    }
+
+
 }
